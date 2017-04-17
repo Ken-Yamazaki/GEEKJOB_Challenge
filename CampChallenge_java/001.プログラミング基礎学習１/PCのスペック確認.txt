@@ -1,0 +1,14 @@
+
+
+CPU
+Intel(R) Core(TM) i5-3230M CPU
+
+メモリ
+8GB
+
+ハードディスク
+C:117GB
+E:330GB
+
+OS
+Windows 10 Home
