@@ -3,10 +3,10 @@
 CPU
 Intel(R) Core(TM) i5-3230M CPU
 
-メモリ
+memory
 8GB
 
-ハードディスク
+HDD
 C:117GB
 E:330GB
 
