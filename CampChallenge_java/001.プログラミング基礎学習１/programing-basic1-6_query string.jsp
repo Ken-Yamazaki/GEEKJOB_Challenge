@@ -8,21 +8,25 @@
 <!DOCTYPE html>
 <%
     //商品種別3種類
-    String comm1 ="雑貨";
-    String comm2 ="生鮮食品";
-    String comm3 ="その他";
+    String product1 ="雑貨";
+    String product2 ="生鮮食品";
+    String product3 ="その他";
     
-    //商品種別ごとの総額・そのときの個数
-    int sum1 = 1000;
-    int sum2 = 800;
-    int sum3 = 1200;
-    int num1 = 2;
-    int num2 = 3;
-    int num3 = 4;
+    //商品種別ごとの総額をクエリストリングで取得
+    String sum1 = request.getParameter("sum1");
+    String sum2 = request.getParameter("sum2");
+    String sum3 = request.getParameter("sum3");
+    int s1 = Integer.parseInt(sum1);
+    int s2 = Integer.parseInt(sum2);
+    int s3 = Integer.parseInt(sum3);
     
-    //購入価格
-    int buy = 3000;
-
+    //購入個数をクエリストリングで取得
+    String num1 = request.getParameter("num1");
+    String num2 = request.getParameter("num2");
+    String num3 = request.getParameter("num3");
+    int n1 = Integer.parseInt(num1);
+    int n2 = Integer.parseInt(num2);
+    int n3 = Integer.parseInt(num3);
 %>
 <html>
     <head>
@@ -32,27 +36,29 @@
     <body>
         <%
             //雑貨
-            out.println("１：" + comm1);
-            out.println(sum1 / num1 + "円");
+            out.println("１：" + product1);
+            out.println(s1 / n1 + "円");
         %> <br>
         <%
             //生鮮食品
-            out.println("２：" + comm2);
-            out.println(sum2 / num2 + "円");
+            out.println("２：" + product2);
+            out.println(s2 / n2 + "円");
         %> <br>
         <%
             //その他
-            out.println("３：" + comm3);
-            out.println(sum3 / num3 + "円");
+            out.println("３：" + product3);
+            out.println(s3 / n3 + "円");
         %>
         <br>
         <%
-            if (buy >= 3000) {
-                if (buy > 5000) {
+            if (s1+s2+s3 >= 3000) {
+                if (s1+s2+s3 >= 5000) {
                     out.println("5000円以上購入されたため、5%のポイントが付きます");
                 } else {
                     out.println("3000円以上購入されたため、4%のポイントが付きます");
                 }
+            } else {
+                
             }
         %>
         
