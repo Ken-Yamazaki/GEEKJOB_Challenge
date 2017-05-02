@@ -82,24 +82,7 @@ public class FortuneTelling extends HttpServlet {
         rd.forward(request, response);
         
     }
-//       /**
-//         * 占い結果をリクエストスコープへ設定
-//         */
-//        //ResultDataのインスタンスを生成
-//        ResultData data = new ResultData();
-//        //setterで実施日付と運勢を記録
-//        data.setD(new Date());
-//        data.setLuck(luckList[index]);
-//        //占い結果をリクエストスコープに登録
-//        request.setAttribute("DATA", data);
-//        
-//        /**
-//         * JSPを呼び出す
-//         */
-//        //リクエストディスパッチャーを取得
-//        RequestDispatcher rd = request.getRequestDispatcher("/FortuneTellingResult");
-//        //JSPを呼び出す
-//        rd.forward(request, response);
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
