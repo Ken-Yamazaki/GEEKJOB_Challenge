@@ -34,7 +34,7 @@ public class Return1 extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
-        String title = "ユーザー定義メソッド／メソッド／Java";
+        String title = "戻り値1／メソッド／Java";
         try {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
