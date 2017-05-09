@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * 課題：引数、戻り値1／メソッド／Java
+ * 課題：引数、戻り値2／メソッド／Java
  */
 
 /**
