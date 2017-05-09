@@ -40,7 +40,7 @@ public class Return2 extends HttpServlet {
         
         //webページのタイトルを設定
         String title = "戻り値2／メソッド／Java";
-        try (PrintWriter out = response.getWriter()){
+        try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -52,14 +52,16 @@ public class Return2 extends HttpServlet {
             //戻り値を表示させる
             ArrayList<String> profile = new ArrayList<String>();
             profile = getProfile();
-            profile.add(0, "1234");
-            out.println("ID：" + profile.get(0));
+            for(int i=1; i<=3; i++) {
+                out.println(profile.get(i));
+                out.println("<br>");
+            }
             
             out.println("</body>");
             out.println("</html>");
         }
     }
-    
+
     /**
      * 戻り値として、人物のID、名前、生年月日、住所を配列にして返却するメソッド
      * @return
@@ -68,9 +70,9 @@ public class Return2 extends HttpServlet {
         ArrayList<String> profile = new ArrayList<String>();
         
         profile.add("ID");              //ID
-        profile.add("山崎健");          //名前
-        profile.add("1988年8月13日");   //生年月日
-        profile.add("東京都");          //住所
+        profile.add("名前：" + "山崎健");          //名前
+        profile.add("生年月日:" + "1988年8月13日");   //生年月日
+        profile.add("住所：" + "東京都");          //住所
         
         return profile;
     }
