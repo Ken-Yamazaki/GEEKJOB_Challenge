@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Java/データ操作/入力内容の取得/HTMLのタグについて</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--
+        スタイルシートは、レイアウトを別の場所に定義しておき、それを構造に対して適用するという考え方
+        background-colorというcssのプロパティを使って、box1とbox2の両方に別々の色をつけている
+        cssのfloat:left;はボックスを左に寄せて、次のコンテンツを右へ回りこませる
+        参考URL⇒http://scene-live.com/page.php?page=14
+        -->
+        <style type="text/css">
+            .box1{
+                background-color:#fad1b6;
+            }
+            .box2{
+                background-color:#3366ff;
+            }
+            .box1, .box2{
+                float: left;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <form action="TagServlet" method="post">
+            
+            <!--2つの数値をキーボード入力させる-->
+            <div class="box1">      <!--<div>は、ひとかたまりの範囲として定義する（ブロック要素）-->
+                1ケタの数値を二つ入力してください<br>
+                値1　<input type="number" name="in1"><br>    <!--1ケタの整数を2回、キーボード入力させる-->
+                値2　<input type="number" name="in2">
+            </div>
+            
+            <!--入力した2つの数値の計算結果予測を入力させる-->
+            <div class="box2">
+                計算結果を予測してください<br>
+                値1＋値2　<input type="number" name="ans1"><br>
+                値1－値2　<input type="number" name="ans2"><br>
+<!--            値1×値2　<input type="number" name="ans3"><br>
+                値1÷値2　<input type="number" name="ans4" step="0.01"><br>  <!--小数第2位までの数値入力を認めることにする
+-->
+            </div>
+            
+            <input type="submit" name="btnSubmit" value="回答結果を送信する">
+        </form>
+    </body>
+</html>
