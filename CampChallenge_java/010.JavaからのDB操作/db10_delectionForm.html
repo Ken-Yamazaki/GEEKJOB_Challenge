@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Java/DB操作/エラーハンドリング/特定のレコードの削除をするフォーム作成</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="Db10_delectionFormServlet" method="post">
+            メンバー情報を削除します。<br>
+            以下の項目を入力してください。<br><br>
+            テーブル名　<input type="text" name="txtTable"><br>
+            削除したいメンバーのID　<input type="number" name="numId"><br>
+            <br><input type="submit" name="btnSubmit" value="削除する">
+        </form>
+    </body>
+</html>
