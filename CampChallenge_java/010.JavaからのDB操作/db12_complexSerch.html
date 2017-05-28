@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Java/DB操作/エラーハンドリング/複合検索</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="Db12_complexSearchServlet" method="post">
+            メンバー情報を検索します。<br>
+            以下の項目を入力してください。<br>
+            <br>
+            検索したいテーブル名　<input type="text" name="txtTable"><br>
+            検索条件<br>
+            
+            名前　<input type="text" name="txtName"><br>
+            電話番号　<input type="text" name="txtTell"><br>
+            年齢　<input type="text" name="numAge" value="1"><br>
+            誕生日<br>
+            年　<input type="text" name="y" value="1900"><br>
+            月　<input type="text" name="m" value="1"><br>
+            日　<input type="text" name="d" value="1"><br>
+            <input type="submit" name="btnSubmit" value="検索する">
+        </form>
+    </body>
+</html>
